@@ -4,9 +4,12 @@ namespace Testing
 {
     public class Module1 : NancyModule
     {
+        
         public Module1()
         {
-            Get["/"] = _ => "Hello!";
+            Get["/Players"] = _ => "Hello";
+            Get["/Players/{id}"] = parameters => "Hello" + parameters.id;
+
         }
     }
 }
